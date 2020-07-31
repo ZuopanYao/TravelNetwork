@@ -1,0 +1,10 @@
+[Unit]
+Description=Shadowsocks Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python /etc/shadowsocks-py-mu/shadowsocks/servers.py
+
+[Install]
+WantedBy=multi-user.target
